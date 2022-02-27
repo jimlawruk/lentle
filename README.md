@@ -1,8 +1,10 @@
-# React Wordle
+# Lentle
 
-This is a clone project of the popular word guessing game we all know and love. Made using React, Typescript, and Tailwind.
+### A Lenten Wordle Game
 
-[**Try out the demo!**](https://reactle.vercel.app/)
+This is a clone of the popular word guessing game we all know and love. Forked from [https://github.com/cwackerfuss/react-wordle](https://github.com/cwackerfuss/react-wordle).
+
+[**Live Site Here**](https://lentle.lawruk.com)
 
 ## Build and run
 
