@@ -39,9 +39,51 @@
       <script defer data-domain="%REACT_APP_PLAUSIBLE_DOMAIN%" src="https://plausible.io/js/plausible.js"></script>
     <% } %>
   </head>
-  <body>
+  <body>    
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <style type="text/css" media="screen">
+        * {
+          margin: 0; 
+          padding: 0;
+        }
+   
+        div#banner { 
+          position: absolute; 
+          top: 0; 
+          left: 0; 
+          background-color: rgb(120,10,120); 
+          width: 100%; 
+        }
+        div#banner h1 { 
+         text-align: center;
+          margin: 0 auto; 
+          padding: 10px; 
+          color: #fff;
+          font-family: "EB Garamond","Eb Garamond",sans-serif;          
+          font-weight: bold;
+          text-decoration: wavy;
+          font-size: 16px;
+        }        
+       </style>
+    <div id="banner">
+        <h1>Lentle: A Lenten Wordle Clone for Lent</h1>
+    </div>
     <div id="root"></div>
+
+    <style type="text/css" media="screen">
+    div#footer { 
+        text-align: center;     
+        width: 100%; 
+      }
+    
+      div#footer a { 
+          color:#363555;
+          text-decoration: underline;
+      }
+    </style>
+    <div id="footer">
+        Each day's word is related to Lent or to the daily scripture reading from here: <a href="https://bible.usccb.org/daily-bible-reading" target="_blank">USCCB Daily Readings</a>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
