@@ -14,7 +14,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                 Guess the word in 6 tries. After each guess, the color of the tiles will
                 change to show how close your guess was to the word.
             </p>
-            <p className="text-sm text-gray-500 dark:text-gray-300">Each day's word is related to Lent or to the daily scripture reading from here: <a href="https://bible.usccb.org/daily-bible-reading" target="_blank">USCCB Daily Readings</a></p>
+            <p className="text-sm text-gray-500 dark:text-gray-300">Each day's word is related to Lent or to the daily scripture reading from here: <a href="https://bible.usccb.org/daily-bible-reading" target="_blank" rel="noreferrer">USCCB Daily Readings</a></p>
             <div className="flex justify-center mb-1 mt-4">
                 <Cell
                     isRevealing={true}
@@ -69,7 +69,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                     className="underline font-bold"
                 >github.com/jimlawruk/lentle</a> forked from:&nbsp;
                 <a
-                    href="https://github.com/jimlawruk/lentle"
+                    href="https://github.com/cwackerfuss/react-wordle"
                     className="underline font-bold"
                 >github.com/cwackerfuss/react-wordle</a>
             </p>
