@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="%REACT_APP_GAME_DESCRIPTION%" />
+    <meta property="og:title" content="Lentle">
+    <meta property="og:description" content="A daily Lenten word puzzle game for Lent, based on Wordle">
+    <meta http-equiv="Cache-Control" content="max-age=86400">
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -24,62 +28,67 @@
     <title>%REACT_APP_GAME_NAME%: Lenten Wordle</title>
 
     <% if (process.env.NODE_ENV === 'production' && process.env.REACT_APP_GOOGLE_MEASUREMENT_ID != null) { %>
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=%REACT_APP_GOOGLE_MEASUREMENT_ID%"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=%REACT_APP_GOOGLE_MEASUREMENT_ID%"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-        gtag('config', '%REACT_APP_GOOGLE_MEASUREMENT_ID%');
-      </script>
-    <% } %>
-    <% if (process.env.NODE_ENV === 'production' && process.env.REACT_APP_PLAUSIBLE_DOMAIN != null) { %>
-      <!-- Plausible Analytics -->
-      <script defer data-domain="%REACT_APP_PLAUSIBLE_DOMAIN%" src="https://plausible.io/js/plausible.js"></script>
-    <% } %>
-  </head>
-  <body>    
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', '%REACT_APP_GOOGLE_MEASUREMENT_ID%');
+        </script>
+        <% } %>
+            <% if (process.env.NODE_ENV === 'production' && process.env.REACT_APP_PLAUSIBLE_DOMAIN != null) { %>
+                <!-- Plausible Analytics -->
+                <script defer data-domain="%REACT_APP_PLAUSIBLE_DOMAIN%" src="https://plausible.io/js/plausible.js"></script>
+                <% } %>
+</head>
+
+<body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <style type="text/css" media="screen">
         * {
-          margin: 0; 
-          padding: 0;
+            margin: 0;
+            padding: 0;
         }
-   
-        div#banner { 
-          position: absolute; 
-          top: 0; 
-          left: 0; 
-          background-color: rgb(120,10,120); 
-          width: 100%; 
+        
+        div#banner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgb(120, 10, 120);
+            width: 100%;
         }
-        div#banner h1 { 
-         text-align: center;
-          margin: 0 auto; 
-          padding: 10px; 
-          color: #fff;
-          font-family: "EB Garamond","Eb Garamond",sans-serif;          
-          font-weight: bold;
-          text-decoration: wavy;
-          font-size: 16px;
-        }        
-       </style>
+        
+        div#banner h1 {
+            text-align: center;
+            margin: 0 auto;
+            padding: 10px;
+            color: #fff;
+            font-family: "EB Garamond", "Eb Garamond", sans-serif;
+            font-weight: bold;
+            text-decoration: wavy;
+            font-size: 16px;
+        }
+    </style>
     <div id="banner">
         <h1>Lentle: A Lenten Wordle Clone for Lent</h1>
     </div>
     <div id="root"></div>
 
     <style type="text/css" media="screen">
-    div#footer { 
-        text-align: center;     
-        width: 100%; 
-      }
-    
-      div#footer a { 
-          color:#363555;
-          text-decoration: underline;
-      }
+        div#footer {
+            text-align: center;
+            width: 100%;
+        }
+        
+        div#footer a {
+            color: #363555;
+            text-decoration: underline;
+        }
     </style>
     <div id="footer">
         Each day's word is related to Lent or to the daily scripture reading from here: <a href="https://bible.usccb.org/daily-bible-reading" target="_blank">USCCB Daily Readings</a>
@@ -94,5 +103,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>
